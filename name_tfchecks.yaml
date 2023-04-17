@@ -1,0 +1,22 @@
+## From the tfsec docs and codebytes on GitHub
+## https://github.com/codebytes/secure-terraform-on-azure/blob/main/.tfsec/custom_tfchecks.yaml
+## They took it from the docs and modified it and I modified it as well
+## with modifications for AWS
+
+checks:
+- code: bucket-naming
+  description: every bucket should start with Parlance_
+  impact: consistent naming
+  resolution: start your buckets with Parlance_
+  requiredTypes:
+  - resource
+  requiredLabels:
+  - aws_s3_bucket
+  severity: HIGH
+  matchSpec:
+    name: name
+    action: regexMatches
+    value: "Parlance_[a-zA-Z]+-[a-zA-Z]+-[a-zA-Z]+"
+  errorMessage: S3-Bucket naming convention should start with Parlance_
+  relatedLinks:
+  - https://docs.aws.amazon.com/s3/index.html
