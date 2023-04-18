@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "Parlance_bucket" {
-  bucket = "Parlance_bucket-usw2"
+resource "aws_s3_bucket" "parlance_buk" {
+  bucket = "parlance_bucket-usw2"
 }
 
 resource "aws_s3_bucket_acl" "s3_bucket_acl" {
