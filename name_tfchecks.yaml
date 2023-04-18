@@ -14,9 +14,9 @@ checks:
   - aws_s3_bucket
   severity: HIGH
   matchSpec:
-    name: name
-    action: regexMatches
-    value: "Parlance_[a-zA-Z]+-[a-zA-Z]+-[a-zA-Z]+"
+    name: name #Could I name it my criteria?
+    action: regexMatches #StarsWith also doesn't work
+    value: "^Parlance_[a-zA-Z]+-[a-zA-Z]+-[a-zA-Z]+"
   errorMessage: S3-Bucket naming convention should start with Parlance_
   relatedLinks:
   - https://docs.aws.amazon.com/s3/index.html
