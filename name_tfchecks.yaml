@@ -5,9 +5,9 @@
 
 checks:
 - code: bucket-naming
-  description: every bucket should start with Parlance_
+  description: every bucket should start with parlance_
   impact: consistent naming
-  resolution: start your buckets with Parlance_
+  resolution: start your buckets with parlance_
   requiredTypes:
   - resource
   requiredLabels:
@@ -16,7 +16,7 @@ checks:
   matchSpec:
     name: name #Could I name it my criteria?
     action: regexMatches #StarsWith also doesn't work
-    value: "^Parlance_[a-zA-Z]+-[a-zA-Z]+-[a-zA-Z]+"
-  errorMessage: S3-Bucket naming convention should start with Parlance_
+    value: "^parlance_[a-zA-Z]"
+  errorMessage: S3-Bucket naming convention should start with parlance_
   relatedLinks:
   - https://docs.aws.amazon.com/s3/index.html
