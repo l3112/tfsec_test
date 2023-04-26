@@ -16,7 +16,7 @@ checks:
   matchSpec:
     name: name #Could I name it my criteria?
     action: regexMatches #StarsWith also doesn't work
-    value: ^par-[a-z0-9]
+    value: ^par-[a-z0-9][a-z0-9][a-z0-9]-[a-z0-9][a-z0-9][a-z0-9]-[a-z0-9][a-z0-9][a-z0-9]/gm
   errorMessage: S3-Bucket naming convention should start with par-
   relatedLinks:
   - https://docs.aws.amazon.com/s3/index.html
